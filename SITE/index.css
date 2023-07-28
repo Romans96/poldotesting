@@ -1,0 +1,611 @@
+.main-container {
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+/* --------------- */
+/* Header */
+/* --------------- */
+.header {
+    height: 100%;
+    position: relative;
+}
+
+/* Header Background Image */
+.header {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center 71%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../Poldo_Poggishoot1-9.jpg");
+    /* transform: scale(1.1); */
+}
+
+
+
+/* .header #header-logo-overlay {
+    position: absolute;
+    z-index: 10;
+    color: black;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    
+} */
+
+/* Header Navbar */
+.header .navbar {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    padding: 1vw 2vw;
+    border: 0;
+    background-color: rgba(0,0,0,0.25);
+    box-shadow: 0 5vw 8vw 8vw rgba(0,0,0,0.25);
+}
+
+.header .navbar #navbar-poldo-logo {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3vw;
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../poldo_logo_bianco_in_alto_a_sinistra_landing.png");
+    margin-left: 0.5vw;
+}
+
+.header .navbar .navbar-menu {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: fit-content;
+    position: relative;
+    background-color: transparent;
+}
+
+.header .navbar .navbar-menu #navbar-menu-text {
+    display: none;
+    cursor: pointer;
+    margin-right: 0.5vw;
+    font-size: 1.5vw;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.16vw;
+    /* font-weight: 800; */
+}
+
+.header .navbar .navbar-menu #btnControl {
+    display: none;
+}
+
+.header .navbar .navbar-menu #navbar-menu-burger {
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    margin-right: 0.5vw;
+    width: 2.5vw;
+    /* height: 2.5vw; */
+    height: auto;
+    
+    /* background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: contain; */
+    /* background-image: url("../menu\ hamburger\ bianco.png"); */
+}
+
+.header .navbar .navbar-menu #navbar-menu-burger img {
+    width: 100%;
+}
+
+.header .navbar .navbar-menu-sliced-burger-container {
+    position: absolute;
+    z-index: 5;
+    align-self: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 2.5vw;
+    height: auto;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5vw;
+    display: none;
+
+    /* background-color: black; */
+}
+
+.header .navbar .navbar-menu-sliced-burger-container > img {
+    width: 100%;
+    transition: .6s ease transform;
+    -moz-transition: .6s ease transform;
+    -webkit-transition: .6s ease transform;
+    -o-transition: .6s ease transform;
+}
+
+/* Header Menu */
+.header .header-menu {
+    position: relative;
+    z-index: 20;
+    float: right;
+    display: none;
+    flex-flow: column;
+    align-items: flex-end;
+    width: fit-content;
+    color: white;
+    text-transform: uppercase;
+    margin: 9vh 2.5vw 0 auto;
+    gap: 2vh;
+}
+
+.header .header-menu a {
+    position: relative;
+    font-size: 1.5vw;
+    border-radius: 5vw;
+    padding: 0.6vw 1.5vw;
+    background-color: var(--maincontent-bg-color);
+    left: 160px;
+    cursor: pointer;
+}
+.header .header-menu a:nth-child(1) {
+    transition: 0.4s ease all;
+}
+.header .header-menu a:nth-child(2) {
+    transition: 0.6s ease all;
+}
+.header .header-menu a:nth-child(3) {
+    transition: 0.8s ease all;
+}
+
+/* Header Menu Site Opacity Background */
+#site-cover-opacity {
+    z-index: 15;
+    position: absolute;
+    /* display: none; */
+    visibility: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    overflow: none;
+    opacity: 0;
+    transition: .8s ease all;
+}
+
+/* Header Description */
+.header .header-desc {
+    display: flex;
+    z-index: 10;
+    flex-flow: column;
+    position: relative;
+    width: fit-content;
+    height: auto;
+    max-width: 35vw;
+    top: 20%;
+    left: 20%;
+    color: black;
+    /* background-color: yellow; */
+}
+
+.header .header-desc #header-desc-text-big {
+    font-size: 5vw;
+}
+.header .header-desc #header-desc-text-big2 {
+    /* font-size: 4.1rem; */
+    margin: -1vw 0 0 0;
+    font-size: 5.9vw;
+}
+.header .header-desc #header-desc-text-small {
+    /* font-size: 1rem; */
+    margin-top: 0.2vw;
+    font-size: 1.6vw;
+}
+
+.header .header-desc #header-desc-btn {
+    cursor: pointer;
+    margin: 1.3vw 0;
+    font-size: 1.5vw;
+    width: fit-content;
+    background-color: var(--maincontent-bg-color);
+    padding: 0.6vw 1.5vw;
+    border-radius: 5vw;
+    color: white;
+}
+.header .header-desc #header-desc-btn:hover {
+    color: var(--maincontent-bg-color);
+    background-color: white;
+}
+
+.header .header-desc #header-desc-btn:nth-of-type(1) {
+    display: none;
+}
+
+
+/* --------------- */
+/* Content */
+/* --------------- */
+.content {
+    position: relative;
+    /* margin-top: -20vh; */
+    z-index: 10;
+    height: 100vw;
+}
+
+.content #main-content-bg {
+    width: 100%;
+    background-color: var(--maincontent-bg-color);
+    height: 100%;
+}
+
+.content .content-panino {
+    position: absolute;
+    z-index: 15;
+    max-width: 55vw;
+}
+.content .content-panino #content-panino {
+    width: 100%;
+    height: auto;
+}
+
+.content .content-writes #content-writes {
+    position: absolute;
+    z-index: 12;
+    max-width: 60vw;
+    opacity: 0.5;
+    width: 100%;
+    height: auto;
+    margin-top: 40vw;
+    left: 60vw;
+}
+
+/* --------------- */
+/* Content Text */
+/* --------------- */
+.content .content-text {
+    position: absolute;
+    z-index: 14;
+    max-width: 35vw;
+    color: white;
+    width: 100%;
+    height: auto;
+    left: 58vw;
+    margin-top: 18vw;
+    
+    display: flex;
+    flex-flow: column;
+    gap: 1.5vw;
+}
+
+.content .content-text-mobile {
+    display: none;
+}
+
+.content .content-text #content-text-big {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 3.6vw;
+}
+
+.content #content-text-p1, .content #content-text-p2, .content #content-text-p3, .content #content-text-p4  {
+    position: relative;
+    display: flex;
+    font-size: 1vw;
+    line-height: 1.2vw;
+}
+
+.content .content-text #content-text-p3 {
+    left: -8vw;
+    width: 150%;
+}
+
+.content .content-text #content-text-p4 {
+    left: -15.5vw;
+    width: 150%;
+}
+
+/* --------------- */
+/* Contact Form */
+/* --------------- */
+.content .content-contacts {
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+    width: 60vw;
+    margin-top: 48vw;
+   
+    font-size: 3.5vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.content .content-contacts #content-contacts-contact {
+    color: white;
+    margin-bottom: 0.8vw;
+    padding-top: 10vw; 
+}
+
+.content .content-contacts .content-contacts-form {
+    display: flex;
+    flex-flow: column;
+    gap: 1.5vh;
+    max-width: 60vw;
+}
+
+.content .content-contacts .content-contacts-form .content-contacts-form-groupinfo {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    gap: 1vw;
+    /* flex-wrap: wrap; */
+    width: 100%;
+}
+
+.content .content-contacts .content-contacts-form .content-contacts-form-groupinfo > * {
+    width: 33%;
+    max-height: 5vw;
+}
+
+.content .content-contacts .content-contacts-form > *:not(:first-child),
+.content .content-contacts .content-contacts-form .content-contacts-form-groupinfo > *
+{
+    border-radius: 4vw;
+    border: 0;
+    padding: 0.8vw;
+    outline: none;
+    font-size: var(--maincontent-form-fontsize);
+}
+
+.content .content-contacts .content-contacts-form #mail-messaggio {
+    height: 12vw;
+    resize: none;
+    border-radius: 2vh; /* To edit on Media queries! Change textarea edges */
+}
+
+::placeholder {
+    font-size: var(--maincontent-form-placeholderfontsize);
+    text-align: left;
+    color: var(--maincontent-bg-color);
+    opacity: var(--maincontent-form-opacity);
+}
+::-webkit-input-placeholder {
+    font-size: var(--maincontent-form-placeholderfontsize);
+    text-align: left; 
+    color: var(--maincontent-bg-color);
+    opacity: var(--maincontent-form-opacity);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    font-size: var(--maincontent-form-placeholderfontsize);
+    text-align: left; 
+    color: var(--maincontent-bg-color);
+    opacity: var(--maincontent-form-opacity);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    font-size: var(--maincontent-form-placeholderfontsize);
+    text-align: left; 
+    color: var(--maincontent-bg-color);
+    opacity: var(--maincontent-form-opacity); 
+}
+
+:-ms-input-placeholder {  
+    font-size: var(--maincontent-form-placeholderfontsize);
+    text-align: left; 
+    color: var(--maincontent-bg-color);
+    opacity: var(--maincontent-form-opacity);
+}
+
+
+.content .content-contacts .content-contacts-form .content-contacts-form-groupsend {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    font-size: 1vw;
+    flex-wrap: wrap;
+}
+
+.content .content-contacts .content-contacts-form .content-contacts-form-groupsend > div:first-child label {
+    color: white;
+    position: relative; 
+    top: -0.35vw; /* Change the vertical position of the text "autorizzo ai dati...." */
+}
+.content .content-contacts .content-contacts-form .content-contacts-form-groupsend > div:first-child input[type="radio"] {
+    --test: 1.2vw; /* To edit on Media Queries. Chanche the radio dimension */
+    /* appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 25px;
+    cursor: pointer; */
+    border-color : #696;
+    outline      : none;
+    cursor:pointer; 
+    width: var(--test);
+    height: var(--test);
+}
+
+
+
+.content .content-contacts .content-contacts-form .content-contacts-form-groupsend .content-contacts-form-groupsend-btn {
+    --transition: .6s all;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: white;
+    width: 15%;
+    border-radius: 4vw;
+    font-size: 1.4vw; /* To edit on the Media Queries. Change SendBtn text */
+    cursor: pointer;
+    padding: 0.6vw 1.6vw; /* To edit on Media Queries. Change SendBtn Arrow Image */
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+}
+
+.content .content-contacts .content-contacts-form .content-contacts-form-groupsend .content-contacts-form-groupsend-btn > span {
+    --transition: 1.6s ease all;
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+    color: var(--maincontent-bg-color);
+}
+
+.content .content-contacts .content-contacts-form .content-contacts-form-groupsend .content-contacts-form-groupsend-btn > img {
+    --transition: .6s ease-in-out opacity;
+    opacity: 0;
+    width: 2.5vw;
+    margin-left: 0.5vw;
+    display: none;
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+}
+
+
+
+
+/* --------------- */
+/* Content Map */
+/* --------------- */
+.content-map {
+    position: relative;
+    /* margin-top: -12.1vw; */
+    z-index: 25;
+    height: 60vw;
+}
+
+.content-map #content-map-bg {
+    width: 100%;
+    background-color: white;
+    height: 100%;
+}
+
+.content-map #map-frame {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.content-map #content-map-logo {
+    position: absolute;
+    z-index: 30;
+    width: auto;
+    height: 10vw;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.5s ease transform;
+}
+
+/* --------------- */
+/* Footer */
+/* --------------- */
+.footer {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    width: 100%;
+    height: fit-content;
+    border: 0;
+    background-color: var(--maincontent-bg-color);
+    color: white;
+    font-size: 0.85vw;
+    /* margin-top: -40%; */
+}
+
+.footer-map-btns {
+    width: 100%;
+    height: 2vw;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2vw;
+    font-size: 1.2vw;
+    /* background-color: green; */
+}
+
+.footer-map-btns > * {
+    background-color: var(--maincontent-bg-color);
+    padding: 0.6vw 1.5vw;
+    border-radius: 5vw;
+}
+
+.footer-map-btns > *:hover, .footer-map-btns > .selected {
+    background-color: white;
+    color: var(--maincontent-bg-color);
+    cursor: pointer;
+    padding: 0.6vw 1.5vw;
+    border-radius: 5vw;
+}
+
+.footer-second {
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    width: 100%;
+    height: fit-content;
+    border: 0;
+}
+
+.footer-logo {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: left;
+    max-width: 30vw;
+    height: fit-content;
+    margin: 4vw 0;
+    gap: 10px;
+}
+
+.footer-logo img {
+    margin-top: 1vw;
+    width: 30%;
+}
+
+#footer-contacts {
+    align-items: center;
+    align-self: center;
+}
+
+.res-container {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    z-index: 9999;
+    font-size: 2rem;
+}
