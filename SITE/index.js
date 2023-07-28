@@ -85,7 +85,7 @@ function mapContentBg_curve (x_mapcontentbg_height = mainContent.offsetHeight) {
 /* Burger Menu Handlers */
 const navbarMenu = document.querySelector(".navbar-menu");
 const navbarMenuText = document.getElementById("navbar-menu-text");
-const navbarMenuBasicBurger = document.querySelector("#navbar-menu-burger")
+const navbarMenuBasicBurger = document.getElementById("navbar-menu-burger")
 
 const rotatedBurgerContainer = document.querySelector(".navbar-menu-sliced-burger-container");
 const headerMenu = document.querySelector(".header-menu ")
@@ -97,22 +97,26 @@ var hoverLeaveDisabled = false;
 const siteCover = document.getElementById("site-cover-opacity");
 
 navbarMenu.onmouseover = (e) => {
-    navbarMenuText.style.display = "none";
+    // navbarMenuText.style.display = "none";
     // navbarMenuBasicBurger.style.transform = 'scale(1.2)';
     rotatedBurgerContainer.style.display = "flex";
     navbarMenuBasicBurger.children[0].style.display = "none"
 }
 
-navbarMenu.onmouseleave = (e) => {
-    resetNavBarmenu()
-}
+// navbarMenu.onmouseleave = (e) => {
+//     resetNavBarmenu()
+// }
 
-rotatedBurgerContainer.addEventListener('click', () => slicedBurgerAnimation(event));
+// navbarMenuBasicBurger.addEventListener('click', () => slicedBurgerAnimation(event));
 
 function slicedBurgerAnimation(e) {
     // debugger
+    e.preventDefault();
+    
     let tmp = 0;
     hoverLeaveDisabled = hoverLeaveDisabled == true ? false : true;
+    console.log("Click", hoverLeaveDisabled)
+
     if (hoverLeaveDisabled == false) return resetNavBarmenu()
     headerMenu.style.display = "flex";
     window.setTimeout(() => {
