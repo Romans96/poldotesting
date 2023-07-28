@@ -2,7 +2,11 @@
 /* Smarthphone Media Query */
 @media screen and (max-width: 480px) {
     /* Header */
-    .header {
+    /* .header {
+        background-image: url("./assets/poldo_mobile.jpg");
+    } */
+
+    .header #poldo-shot1 {
         background-image: url("./assets/poldo_mobile.jpg");
     }
 
@@ -21,6 +25,11 @@
     .header .navbar {
         flex-direction: column;
         justify-content: center;
+    }
+
+    .header .navbar .navbar-menu {
+        width: 4.5vh;
+        height: 4.5vh;
     }
 
     .header .navbar #navbar-poldo-logo {
