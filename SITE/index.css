@@ -22,14 +22,33 @@
     position: relative;
     width: 100vw;
     height: 100%;
-    background-attachment: fixed;
+    /* background-attachment: fixed;
     background-position: center 71%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../Poldo_Poggishoot1-9.jpg");
+    background-image: url("../Poldo_Poggishoot1-9.jpg"); */
     /* transform: scale(1.1); */
 }
 
+.header #cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: transparent;
+    z-index: 5;
+    top: 0;
+}
+
+.header #poldo-shot1 {
+    background-image: url("../Poldo_Poggishoot1-9.jpg");
+    background-position: center 71%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
 
 
 /* .header #header-logo-overlay {
@@ -76,7 +95,10 @@
     flex-flow: row;
     justify-content: flex-end;
     align-items: center;
-    width: fit-content;
+    /* width: -webkit-fit-content;
+    width: -moz-fit-content; */
+    width: 3vw;
+    height: 3vw;
     position: relative;
     background-color: transparent;
 }
@@ -130,6 +152,7 @@
     align-items: center;
     gap: 0.5vw;
     display: none;
+    cursor: pointer;
 
     /* background-color: black; */
 }
@@ -150,6 +173,8 @@
     display: none;
     flex-flow: column;
     align-items: flex-end;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     color: white;
     text-transform: uppercase;
@@ -196,6 +221,8 @@
     z-index: 10;
     flex-flow: column;
     position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     height: auto;
     max-width: 35vw;
@@ -223,6 +250,8 @@
     cursor: pointer;
     margin: 1.3vw 0;
     font-size: 1.5vw;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     background-color: var(--maincontent-bg-color);
     padding: 0.6vw 1.5vw;
@@ -383,6 +412,34 @@
     border-radius: 2vh; /* To edit on Media queries! Change textarea edges */
 }
 
+::-webkit-input-placeholder {
+    font-size: var(--maincontent-form-placeholderfontsize);
+    text-align: left;
+    color: var(--maincontent-bg-color);
+    opacity: var(--maincontent-form-opacity);
+}
+
+::-moz-placeholder {
+    font-size: var(--maincontent-form-placeholderfontsize);
+    text-align: left;
+    color: var(--maincontent-bg-color);
+    opacity: var(--maincontent-form-opacity);
+}
+
+:-ms-input-placeholder {
+    font-size: var(--maincontent-form-placeholderfontsize);
+    text-align: left;
+    color: var(--maincontent-bg-color);
+    opacity: var(--maincontent-form-opacity);
+}
+
+::-ms-input-placeholder {
+    font-size: var(--maincontent-form-placeholderfontsize);
+    text-align: left;
+    color: var(--maincontent-bg-color);
+    opacity: var(--maincontent-form-opacity);
+}
+
 ::placeholder {
     font-size: var(--maincontent-form-placeholderfontsize);
     text-align: left;
@@ -463,17 +520,11 @@
     font-size: 1.4vw; /* To edit on the Media Queries. Change SendBtn text */
     cursor: pointer;
     padding: 0.6vw 1.6vw; /* To edit on Media Queries. Change SendBtn Arrow Image */
-    -webkit-transition: var(--transition);
-    -moz-transition: var(--transition);
-    -o-transition: var(--transition);
     transition: var(--transition);
 }
 
 .content .content-contacts .content-contacts-form .content-contacts-form-groupsend .content-contacts-form-groupsend-btn > span {
     --transition: 1.6s ease all;
-    -webkit-transition: var(--transition);
-    -moz-transition: var(--transition);
-    -o-transition: var(--transition);
     transition: var(--transition);
     color: var(--maincontent-bg-color);
 }
@@ -484,9 +535,6 @@
     width: 2.5vw;
     margin-left: 0.5vw;
     display: none;
-    -webkit-transition: var(--transition);
-    -moz-transition: var(--transition);
-    -o-transition: var(--transition);
     transition: var(--transition);
 }
 
@@ -535,6 +583,8 @@
     flex-flow: column;
     justify-content: space-around;
     width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     border: 0;
     background-color: var(--maincontent-bg-color);
@@ -575,6 +625,8 @@
     flex-flow: row;
     justify-content: space-around;
     width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     border: 0;
 }
@@ -585,6 +637,8 @@
     justify-content: center;
     align-items: left;
     max-width: 30vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     margin: 4vw 0;
     gap: 10px;

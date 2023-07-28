@@ -44,11 +44,12 @@
         display: none;
     } */
 
-    /* Block to center the sliced menu burger */
-    /* .header .navbar .navbar-menu #btnControl:checked + label {
-        top: 27vh;
-        left: -10vw;
-    } */
+    /* Code to center the sliced menu burger */
+    .header .navbar .navbar-menu #btnControl:checked + label {
+        /* top: 27vh;
+        left: -10vw */
+        left: -0.1vw;
+    }
 
     .header .navbar .navbar-menu-sliced-burger-container {
         width: 4.5vh;

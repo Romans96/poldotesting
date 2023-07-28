@@ -6,7 +6,7 @@ const poldoShot1 = document.getElementById("poldo-shot1");
 
 
 const headerDesc = document.getElementsByClassName("header-desc")[0];
-const headerDescBtn = document.getElementById("header-desc-btn");
+const headerDescBtn = document.querySelectorAll("#header-desc-btn");
 
 // // headerDescBtn.style.width = headerDesc.offsetWidth /2 + "px";
 
@@ -22,10 +22,13 @@ addEventListener("resize", (e) => {
     mapContentBg_curve();
 })
 
-headerDescBtn.addEventListener('click', (e) => {
-    window.location.href="#content-contacts-contact";
-    e.preventDefault();
-    e.stopPropagation();
+headerDescBtn.forEach( (btn) => {
+    btn.addEventListener('click', (e) => {
+        window.location.href="#content-contacts-contact";
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+    })
 })
 
 // poldoShot1.addEventListener("mousemove", (e) => {
@@ -95,8 +98,8 @@ const siteCover = document.getElementById("site-cover-opacity");
 navbarMenu.onmouseover = (e) => {
     navbarMenuText.style.display = "none";
     // navbarMenuBasicBurger.style.transform = 'scale(1.2)';
-    navbarMenuBasicBurger.children[0].style.display = "none"
     rotatedBurgerContainer.style.display = "flex";
+    navbarMenuBasicBurger.children[0].style.display = "none"
 }
 
 navbarMenu.onmouseleave = (e) => {
@@ -120,7 +123,7 @@ rotatedBurgerContainer.addEventListener('click', (e) => {
         rotatedBurgerContainer.children[0].style.transform = 'rotate(-7deg)'
         rotatedBurgerContainer.children[1].style.transform = 'rotate(9deg)'
         rotatedBurgerContainer.children[2].style.transform = 'rotate(-5deg)'
-    }, 0)
+    }, 200)
     
 });
 
