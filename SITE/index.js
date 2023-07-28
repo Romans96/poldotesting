@@ -17,7 +17,7 @@ window.addEventListener("load", (event) => {
     mapContentBg_curve();
 })
 
-addEventListener("resize", (e) => {
+window.addEventListener("resize", (e) => {
     mainContentBg_curve();
     mapContentBg_curve();
 })
@@ -45,6 +45,7 @@ function curvePx(height, percent = 8) {
 function mainContentBg_curve (x_maincontent_height = mainContent.offsetHeight) {
     
     let window_width = window.innerWidth;
+    console.log(window.innerWidth)
     let curvepx = curvePx(x_maincontent_height)
 
     /* Calcolo la percentuale di quando il contenitore del contenuto (quello incurvato) deve stare sopra all'immagine
@@ -106,7 +107,10 @@ navbarMenu.onmouseleave = (e) => {
     resetNavBarmenu()
 }
 
-rotatedBurgerContainer.addEventListener('click', (e) => {
+rotatedBurgerContainer.addEventListener('click', () => slicedBurgerAnimation(event));
+
+function slicedBurgerAnimation(e) {
+    // debugger
     let tmp = 0;
     hoverLeaveDisabled = hoverLeaveDisabled == true ? false : true;
     if (hoverLeaveDisabled == false) return resetNavBarmenu()
@@ -123,9 +127,10 @@ rotatedBurgerContainer.addEventListener('click', (e) => {
         rotatedBurgerContainer.children[0].style.transform = 'rotate(-7deg)'
         rotatedBurgerContainer.children[1].style.transform = 'rotate(9deg)'
         rotatedBurgerContainer.children[2].style.transform = 'rotate(-5deg)'
-    }, 200)
-    
-});
+    }, 0)   
+}
+
+
 
 function resetNavBarmenu() {
     if (hoverLeaveDisabled) return;

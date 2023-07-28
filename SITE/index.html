@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="./global.css" />
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./mediaqueries.css" />
+    
 </head>
-<body>
+<body onscroll="scrollFn(event)">
     <div class="main-container">
         <div id="site-cover-opacity"></div>
         <section class="header">
@@ -188,6 +189,9 @@
             </div>
             
         </section>
+        <!-- <div class="test" style="width: 100%; height: 400px;">
+            A
+        </div> -->
     </div>
 
     <!-- <div class="res-container">
@@ -195,5 +199,8 @@
         <span> x </span>
         <span></span>
     </div> -->
+    <script type="text/javascript"> function scrollFn(e) {  console.log(window.scrollY)
+        document.getElementById("poldo-shot1").style.display = window.scrollY > 600 ? "none" : "";
+            } </script>
 </body>
 </html>
