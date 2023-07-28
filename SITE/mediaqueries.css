@@ -55,9 +55,9 @@
         gap: 0.8vh;
         /* left: -2vw; */
     }
-    .header .navbar .navbar-menu-sliced-burger-container[style*="display:flex"] {
+    /* .header .navbar .navbar-menu-sliced-burger-container[style*="display:flex"] {
         left: -20vw;
-    }
+    } */
 
     .header .header-menu {
         position: absolute;
@@ -65,7 +65,7 @@
         transform: translate(-50%, 60%);
         left: 50vw; */
         top: 3vw;
-        left: 63vw;
+        right: 2vh;
     }
 
     .header .header-menu a {
