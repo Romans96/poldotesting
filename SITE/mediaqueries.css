@@ -19,10 +19,8 @@
         background-image: url("./assets/poldo_mobile.jpg");
     } */
 
-    .header #poldo-shot1 {
-        background-image: url("./assets/poldo_mobile.jpg");
-        background-size: cover;
-        top: 0;
+    .header{
+        background-image: url("./assets/poldo_mobile.jpg");background-size: 115%;
     }
 
     .header::after {

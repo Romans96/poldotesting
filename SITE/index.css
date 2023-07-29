@@ -24,6 +24,12 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    background-image: url("../Poldo_Poggishoot1-9.jpg");
+    background-size: cover;
+    background-position: center 71%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    top: 0;
 }
 
 .header #cover {
@@ -39,19 +45,8 @@ body {
     height: 100vh;
     background-color: rgba(0,0,0,0.25);
     position: absolute;
-    z-index: 30;
+    z-index: 20;
 }
-#poldo-shot1 {
-    background-image: url("../Poldo_Poggishoot1-9.jpg");
-    background-position: center 71%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-}
-
 
 .header .navbar {
     position: absolute;
@@ -60,7 +55,6 @@ body {
     align-items: center;
     top: 0;
     left: 0;
-    z-index: 995;
     width: 100%;
     height: 10%;
     padding: 1vw 2vw;
@@ -161,7 +155,7 @@ body {
 /* Header Menu */
 .header .header-menu {
     position: relative;
-    z-index: 999;
+    z-index: 999 !important;
     float: right;
     display: none;
     flex-flow: column;
@@ -182,6 +176,7 @@ body {
     padding: 0.6vw 1.5vw;
     background-color: var(--maincontent-bg-color);
     left: 160px;
+    z-index: 999 !important;
     cursor: pointer;
 }
 .header .header-menu a:nth-child(1) {
