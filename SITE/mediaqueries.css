@@ -1,4 +1,17 @@
 
+/* @media screen and (max-height: 480px) and (orientation: landscape) {
+    html {
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        width: 100vh;
+        height: 100vw;
+        overflow-x: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+} */
+
 /* Smarthphone Media Query */
 @media screen and (max-width: 480px) {
     /* Header */
@@ -8,6 +21,8 @@
 
     .header #poldo-shot1 {
         background-image: url("./assets/poldo_mobile.jpg");
+        background-size: cover;
+        top: 0;
     }
 
     .header::after {

@@ -45,7 +45,7 @@ function curvePx(height, percent = 8) {
 function mainContentBg_curve (x_maincontent_height = mainContent.offsetHeight) {
     
     let window_width = window.innerWidth;
-    console.log(window.innerWidth)
+    // console.log(window.innerWidth)
     let curvepx = curvePx(x_maincontent_height)
 
     /* Calcolo la percentuale di quando il contenitore del contenuto (quello incurvato) deve stare sopra all'immagine
@@ -97,10 +97,13 @@ var hoverLeaveDisabled = false;
 const siteCover = document.getElementById("site-cover-opacity");
 
 navbarMenu.onmouseover = (e) => {
-    // navbarMenuText.style.display = "none";
-    // navbarMenuBasicBurger.style.transform = 'scale(1.2)';
-    rotatedBurgerContainer.style.display = "flex";
-    navbarMenuBasicBurger.children[0].style.display = "none"
+    e.preventDefault();
+    if (window.innerWidth > 480) { // Remove edits on mobile
+        // navbarMenuText.style.display = "none";
+        // navbarMenuBasicBurger.style.transform = 'scale(1.2)';
+        rotatedBurgerContainer.style.display = "flex";
+        navbarMenuBasicBurger.children[0].style.display = "none"
+    }
 }
 
 // navbarMenu.onmouseleave = (e) => {
@@ -113,11 +116,16 @@ function slicedBurgerAnimation(e) {
     // debugger
     e.preventDefault();
     
-    let tmp = 0;
     hoverLeaveDisabled = hoverLeaveDisabled == true ? false : true;
     console.log("Click", hoverLeaveDisabled)
 
     if (hoverLeaveDisabled == false) return resetNavBarmenu()
+
+    if (window.innerWidth <= 480) { // Mobile
+        rotatedBurgerContainer.style.display = "flex";
+        navbarMenuBasicBurger.children[0].style.display = "none"
+    }
+
     headerMenu.style.display = "flex";
     window.setTimeout(() => {
         
