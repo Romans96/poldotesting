@@ -20,7 +20,9 @@
     } */
 
     .header{
-        background-image: url("./assets/poldo_mobile.jpg");background-size: 115%;
+        background-image: url("./assets/poldo_mobile.jpg") !important;
+        background-size: 115%;
+        background-position: top;
     }
 
     .header::after {
