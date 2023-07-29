@@ -161,7 +161,7 @@ body {
 /* Header Menu */
 .header .header-menu {
     position: relative;
-    z-index: 33;
+    z-index: 999;
     float: right;
     display: none;
     flex-flow: column;
