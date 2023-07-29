@@ -17,7 +17,7 @@
 <body onscroll="scrollFn(event)">
     <div class="main-container">
         <div id="site-cover-opacity"></div>
-        <section class="header">
+        <section class="header" id="header">
             <div class="navbar">
                 <div id="navbar-poldo-logo" ></div>
                 <div class="navbar-menu" onclick="slicedBurgerAnimation(event)">
@@ -201,7 +201,7 @@
     </div> -->
     <script type="text/javascript"> 
         function scrollFn(e) {
-            document.getElementById("poldo-shot1").style.display = window.scrollY > 600 ? "none" : "";
+            document.getElementById('header').style.visibility = (window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight ? "hidden" : "visible";
         }
     </script>
 </body>

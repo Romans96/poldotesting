@@ -24,13 +24,23 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-image: url("../Poldo_Poggishoot1-9.jpg");
-    background-size: cover;
-    background-position: center 71%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    top: 0;
 }
+.header::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    position: fixed;
+    background-image: url("../Poldo_Poggishoot1-9.jpg");
+    background-position: center 71%;
+    background-size: 115%;
+    background-repeat: no-repeat;
+
+    /* This is the important part */
+    will-change: transform; 
+  }
 
 .header #cover {
     width: 100%;
