@@ -85,7 +85,8 @@ function mapContentBg_curve (x_mapcontentbg_height = mainContent.offsetHeight) {
 /* Burger Menu Handlers */
 const navbarMenu = document.querySelector(".navbar-menu");
 const navbarMenuText = document.getElementById("navbar-menu-text");
-const navbarMenuBasicBurger = document.getElementById("navbar-menu-burger")
+const navbarMenuBasicBurger = document.getElementById("navbar-menu-burger");
+const menuContainer = document.getElementById('header-menu-container');
 
 const rotatedBurgerContainer = document.querySelector(".navbar-menu-sliced-burger-container");
 const headerMenu = document.querySelector(".header-menu ")
@@ -106,16 +107,9 @@ navbarMenu.onmouseover = (e) => {
     }
 }
 
-// navbarMenu.onmouseleave = (e) => {
-//     resetNavBarmenu()
-// }
-
-// navbarMenuBasicBurger.addEventListener('click', () => slicedBurgerAnimation(event));
-
 function slicedBurgerAnimation(e) {
-    // debugger
     e.preventDefault();
-    
+    document.body.style.overflow = "hidden";
     hoverLeaveDisabled = hoverLeaveDisabled == true ? false : true;
     console.log("Click", hoverLeaveDisabled)
 
@@ -128,7 +122,7 @@ function slicedBurgerAnimation(e) {
 
     headerMenu.style.display = "flex";
     window.setTimeout(() => {
-        
+        menuContainer.style.display = 'block';
         siteCover.style.visibility = "visible";
         siteCover.style.opacity = "0.5";
         
@@ -150,6 +144,8 @@ function resetNavBarmenu() {
         item.style.left = ""
     }
     window.setTimeout(() => {
+        document.body.style.overflow = "auto";
+        menuContainer.style.display = "none";
         navbarMenuText.style.display = "";
         // navbarMenuBasicBurger.style.transform = 'scale(1.0)';
         navbarMenuBasicBurger.children[0].style.display = "";

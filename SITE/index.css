@@ -23,12 +23,6 @@ body {
     position: relative;
     width: 100vw;
     height: 100vh;
-    /* background-attachment: fixed;
-    background-position: center 71%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("../Poldo_Poggishoot1-9.jpg"); */
-    /* transform: scale(1.1); */
     overflow: hidden;
 }
 
@@ -36,11 +30,17 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: transparent;
-    z-index: 5;
+    background-color: rgba(0,0,0,0.25);
+    z-index: 20;
     top: 0;
 }
-
+#header-menu-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.25);
+    position: absolute;
+    z-index: 30;
+}
 #poldo-shot1 {
     background-image: url("../Poldo_Poggishoot1-9.jpg");
     background-position: center 71%;
@@ -53,25 +53,14 @@ body {
 }
 
 
-/* .header #header-logo-overlay {
-    position: absolute;
-    z-index: 10;
-    color: black;
-    opacity: 0.8;
-    width: 100%;
-    height: 100%;
-    
-} */
-
-/* Header Navbar */
 .header .navbar {
     position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 20;
     top: 0;
     left: 0;
+    z-index: 995;
     width: 100%;
     height: 10%;
     padding: 1vw 2vw;
@@ -86,6 +75,7 @@ body {
     width: 100%;
     height: 3vw;
     background-position: 0%;
+    z-index: 25;
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url("../poldo_logo_bianco_in_alto_a_sinistra_landing.png");
@@ -94,6 +84,7 @@ body {
 
 .header .navbar .navbar-menu {
     display: flex;
+    z-index: 25;
     flex-flow: row;
     justify-content: flex-end;
     align-items: center;
@@ -170,7 +161,7 @@ body {
 /* Header Menu */
 .header .header-menu {
     position: relative;
-    z-index: 20;
+    z-index: 33;
     float: right;
     display: none;
     flex-flow: column;
@@ -201,20 +192,6 @@ body {
 }
 .header .header-menu a:nth-child(3) {
     transition: 0.8s ease all;
-}
-
-/* Header Menu Site Opacity Background */
-#site-cover-opacity {
-    z-index: 15;
-    position: absolute;
-    /* display: none; */
-    visibility: hidden;
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-    overflow-y: hidden;
-    opacity: 0;
-    transition: .8s ease all;
 }
 
 /* Header Description */
